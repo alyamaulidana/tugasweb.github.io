@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Data Absensi</title>
+</head>
+<body>
+    
+    <header>
+        <h1>Data Absensi Siswa</h1>
+        <p>Pendataan Daftar Hadir SMK Darul Ulum Periode 2024-2025</p>
+    </header>
+    
+    <div class="input">
+        <input type="text" id="nomorabsen" placeholder="nomor absen">
+        <input type="text" id="nama" placeholder="Nama Lengkap">
+
+        <select id="prodi">
+            <option value="" disabled selected hidden>Jurusan</option>
+            <option value="Teknik Informatika">Tehnik Komputer Jaringan</option>
+            <option value="Manajemen Informatika">Akuntansi Keuangan Lembaga</option>
+            <option value="Manajemen Informatika">Tata Boga</option>
+        </select>
+
+        <button id="btnsimpan" onclick="simpanData()">Simpan</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Nama Lengkap</th>
+                <th>Jurusan</th>
+            </tr>
+        </thead>
+
+        <tbody id="hasil">
+            <!-- Data akan ditampilkan di sini -->
+        </tbody>
+    </table>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+    <script src="alert/sweetalert2.all.min.js"></script>
+</body>
+</html>
